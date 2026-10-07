@@ -84,7 +84,7 @@ app.get('/about', async (req, res) => {
     return res.json({
       title: 'About Us',
       paragraph: "Hi, welcome to this repo! I'm Aaron, a current senior studying computer science. My home state is Maryland, and a fun fact about me is that I studied at NYU's Florence campus during my freshman year. Outside of studying, I've been learning how to draw, exercising, and exploring the various food and entertainment options in NYC. Currently, my favorite pizza places are Pop's Pizza and Nolita Pizza.",
-      imageUrl: '',
+      imageUrl: 'https://github.com/agile-students-fall2026/full-mern-stack-web-app-Aaron/blob/master/front-end/public/36C8084C-2BFB-4021-8723-19506C434F87_4_5005_c.jpeg?raw=true',
       status: 'all good',
     })
   } catch (err) {
