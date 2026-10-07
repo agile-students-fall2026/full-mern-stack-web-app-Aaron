@@ -78,5 +78,23 @@ app.post('/messages/save', async (req, res) => {
   }
 })
 
+// a route to handle fetching about us data
+app.get('/about', async (req, res) => {
+  try {
+    return res.json({
+      title: 'About Us',
+      paragraph: "Hi, welcome to this repo! I'm Aaron, a current senior studying computer science. My home state is Maryland, and a fun fact about me is that I studied at NYU's Florence campus during my freshman year. Outside of studying, I've been learning how to draw, exercising, and exploring the various food and entertainment options in NYC. Currently, my favorite pizza places are Pop's Pizza and Nolita Pizza.",
+      imageUrl: '',
+      status: 'all good',
+    })
+  } catch (err) {
+    console.error(err)
+    return res.status(400).json({
+      error: err,
+      status: 'failed to retrieve about data',
+    })
+  }
+})
+
 // export the express app we created to make it available to other modules
 module.exports = app // CommonJS export style!
